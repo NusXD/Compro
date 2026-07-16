@@ -8,6 +8,7 @@ def get_avgscore():
 
         try:
             avg.append(int(score))
+            
         except ValueError:
             print("Invalid input. Please enter a valid integer.")
 
@@ -24,3 +25,5 @@ print(f"Average score: {average_score:.2f}")
 if average_score > 95:
     print("Congratulations!")
     print("That is a great average!")
+else:
+    print("nah")

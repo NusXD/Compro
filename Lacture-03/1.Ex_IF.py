@@ -1,29 +1,30 @@
 def Get_info():
-    name = []
-    age = []
+    names = []
+    ages = []
+
     while True:
-        try:
-            info = input(f"Enter the name of person number {len(name) + 1} (or 'done' to finish): ")
-            if info.lower() == 'done':
-                break
-        except ValueError:
-            print("Invalid input. Please enter a valid name.")
+        name = input(f"Enter the name of person number {len(names) + 1} (or 'done' to finish): ")
+
+        if name.lower() == "done":
+            break
 
         try:
-            age = int(input(f"Person's number {len(age) + 1} age is: "))
-            age.append(age)
-            return name, age
+            age = int(input(f"{name}'s age is: "))
+            names.append(name)
+            ages.append(age)
         except ValueError:
             print("Invalid input. Please enter a valid age.")
 
-name, age = Get_info()
+    return names, ages
 
-for i in range(len(name)):
-    if age[i] > 18:
-        print(f"Name: {name[i]}")
-        print(f"Age: {age[i]}")
-        print("You are an adult.")
+
+names, ages = Get_info()
+
+for i in range(len(names)):
+    print(f"\nName: {names[i]}")
+    print(f"Age: {ages[i]}")
+
+    if ages[i] >= 18:
+        print("adult.")
     else:
-        print(f"Name: {name[i]}")
-        print(f"Age: {age[i]}")
-        print("You are a minor.")
+        print("minor.") 
