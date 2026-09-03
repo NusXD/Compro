@@ -1,5 +1,4 @@
 def get_house_hours():
-    person = []
     
     house = int(input("Enter the number of houses: "))
     hours_pay = float(input("Enter the hourly pay rate: "))

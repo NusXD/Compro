@@ -1,0 +1,2 @@
+New line added in append mode.
+New line added in append mode.
